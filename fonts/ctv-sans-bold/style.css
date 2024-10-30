@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'CTV Sans';
+    src: local('CTV Sans Bold'), local('CTV-Sans-Bold'),
+        url('CTVSans-Bold.woff2') format('woff2'),
+        url('CTVSans-Bold.woff') format('woff'),
+        url('CTVSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
