@@ -22,6 +22,7 @@
   border-bottom: 1px solid #c8c8c8;
   min-height: 60px;
   max-height: fit-content;
+  margin-bottom: 30px;
 }
 .header {
   display: flex;
@@ -78,7 +79,7 @@
     font-weight: bold;
     &::before {
       content: "";
-      background-image: url(images/lock-solid.svg);
+      background-image: url(images/header/lock-solid.svg);
       width: 6px;
       height: 8px;
       background-repeat: no-repeat;
@@ -151,7 +152,7 @@
       width: 10px;
       height: 10px;
       transform: translateY(-50%);
-      background-image: url("images/arrow.png");
+      background-image: url("images/header/arrow.png");
       background-size: cover;
     }
   }
@@ -172,6 +173,7 @@
       font-size: 14px;
       box-sizing: border-box;
       &__input {
+        outline: none;
         border: none;
       }
       &__icon {
@@ -180,6 +182,112 @@
       }
     }
   }
+}
+
+.section-article {
+  img {
+    max-width: -webkit-fill-available;
+  }
+}
+.article {
+  &__top {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c8c8c8;
+  }
+}
+.place {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 10px;
+  .country {
+    font-size: 14px;
+    color: #007aff;
+    font-family: "CTVSans-Bold", "Helvetica", "Arial", sans-serif;
+  }
+  .news {
+    border-left: 1px solid #404040;
+    padding-left: 4px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+.title {
+  font-size: 24px;
+  font-family: "CTVSans-Bold", "Helvetica", "Arial", sans-serif;
+  margin-bottom: 20px;
+}
+
+.article {
+  &__main {
+    padding: 40px 0px;
+  }
+}
+.author {
+  margin-bottom: 20px;
+  &__name,
+  &__job,
+  &__contact {
+    font-size: 14px;
+    font-family: "CTVSans-Bold", "Helvetica", "Arial", sans-serif;
+  }
+
+  &__name,
+  &__job {
+    color: #404040;
+  }
+
+  &__staff {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  &__contact {
+    color: #007aff;
+    margin-bottom: 20px;
+  }
+
+  &__date {
+    font-size: 14px;
+  }
+}
+
+.content,
+.interview {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content {
+  font-size: 18px;
+  line-height: 1.15;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #404040;
+  p {
+    line-height: 1.75rem;
+  }
+  span {
+    font-weight: 600;
+  }
+  img {
+    width: -webkit-fill-available;
+  }
+}
+.interview {
+  &__title {
+    font-size: 20px;
+  }
+}
+.highlight {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 10px;
+  padding: 0px 20px;
+  margin-left: 10px;
+  border-left: 5px solid;
+}
+.yellow-img {
+  border: 2px solid yellow;
 }
 
 @media screen and (min-width: 600px) {
@@ -199,6 +307,9 @@
   }
 }
 @media screen and (min-width: 1024px) {
+  .container {
+    padding: 0 20px;
+  }
   .header {
     gap: 5px;
     padding: 0px 20px;
@@ -207,8 +318,8 @@
     display: none;
   }
   .header__navigation {
+    margin: 0px 0px 5px 0px;
     justify-content: end;
-    margin-bottom: 5px;
     flex-direction: row;
     max-height: unset;
     overflow: unset;
