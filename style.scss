@@ -293,6 +293,7 @@
 }
 
 .section-experiment {
+  margin-bottom: 30px;
   font-family: Arial, Helvetica, sans-serif;
 
   p {
@@ -338,8 +339,6 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  &__item {
-  }
 
   &__item1 {
     display: flex;
@@ -350,6 +349,7 @@
   }
 
   &__item2 {
+    max-width: 300px;
     color: #777777;
   }
 }
@@ -429,10 +429,40 @@
   }
 }
 .regular {
-  font-size: 14px;
+  font-size: 16px;
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.section-instructions {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  &__caption {
+    font-size: 20px;
+    text-align: center;
+  }
+}
+
+.section-connect {
+  margin-bottom: 30px;
+}
+.connect {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  &__caption {
+    padding: 10px 0;
+    border-top: 1px solid #c8c8c8;
+    font-size: 20px;
+    font-family: "CTVSans-Bold", "Arial", sans-serif;
+  }
+}
+
 @media screen and (min-width: 600px) {
   .external-link {
     display: flex;
