@@ -14,6 +14,9 @@
   margin: 0;
   padding: 0;
 }
+a:hover {
+  color: #eb0000;
+}
 .container {
   padding: 0 10px;
 }
@@ -344,7 +347,6 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 5px 5px 0 5px;
     border: 1px solid #cecece;
   }
 
@@ -354,6 +356,7 @@
   }
 }
 .check-first {
+  padding: 5px 5px 0 5px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -397,6 +400,13 @@
   .check-third__bottom span {
     border-bottom: 2px solid #000;
     font-weight: 600;
+  }
+
+  .check-third__top span:not(:last-child) {
+    border-right: 2px solid #000;
+  }
+  .check-third__bottom span:not(:last-child) {
+    border-right: 1px solid #000;
   }
   .check-third__top span {
     background-color: #cecece;
@@ -446,20 +456,134 @@
     font-size: 20px;
     text-align: center;
   }
+  &__item {
+    background-color: #dddddd;
+    font-family: "CTVSans-Bold", "Arial", sans-serif;
+    border-left: 3px solid #d10b11;
+    border-right: 3px solid #d10b11;
+    border-radius: 15px;
+    padding: 15px 25px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .circle {
+      width: 50px; /* Ширина круга */
+      height: 50px; /* Высота круга */
+      border: 3px solid red; /* Красный бордер */
+      border-radius: 50%; /* Делает элемент кругом */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+    }
+    .number {
+      font-size: 32px;
+      font-family: emoji;
+      color: red;
+    }
+  }
+  &__btn {
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-style: none;
+    border-radius: 15px;
+    cursor: pointer;
+    border-left: 2px solid #d10b11;
+    border-right: 2px solid #d10b11;
+  }
 }
 
 .section-connect {
+  display: none;
   margin-bottom: 30px;
 }
 .connect {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   &__caption {
+    color: #2c2c2c;
     padding: 10px 0;
     border-top: 1px solid #c8c8c8;
     font-size: 20px;
     font-family: "CTVSans-Bold", "Arial", sans-serif;
+  }
+  &__images {
+    display: flex;
+    justify-content: space-between;
+    img {
+      max-width: 216px;
+    }
+  }
+}
+
+.section-footer {
+  padding-top: 40px;
+  background-color: #003662;
+  color: #fff;
+  font-family: CTV sans bold, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+.footer {
+  padding: 0 20px 20px 20px;
+  span:not(:last-child) {
+    &::after {
+      content: " | ";
+    }
+  }
+  &__item {
+    h3 {
+      padding-top: 10px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      border-top: 0.5px solid #fff;
+    }
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    &--1 {
+      gap: 20px;
+    }
+    &--3 {
+      line-height: 2em;
+      margin-bottom: 10px;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  &__text {
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+
+.videolinks {
+  line-height: 2.5em;
+}
+.border-block {
+  padding-top: 5px;
+  border-top: 5px solid #fff;
+  display: flex;
+  gap: 34px;
+  margin-bottom: 16px;
+  button {
+    font-family: CTV sans bold, Helvetica, Arial, sans-serif;
+    background-color: #fff;
+    color: #2c2c2c;
+    display: block;
+    font-weight: 700;
+    padding: 8px;
+    text-align: center;
+    border-style: none;
+    min-width: 132px;
   }
 }
 
@@ -470,6 +594,14 @@
       display: none;
     }
   }
+  .checks__item1 {
+    margin: 0 auto;
+    min-width: 500px;
+    max-width: 560px;
+  }
+  .check-first {
+    padding-right: 30px;
+  }
 }
 @media screen and (min-width: 768px) {
   .external-link {
@@ -477,6 +609,9 @@
     &__logo {
       display: block;
     }
+  }
+  .section-connect {
+    display: block;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -527,6 +662,17 @@
     }
     .nav-search {
       order: 2;
+    }
+  }
+  .checks__item1 {
+    min-width: 768px;
+  }
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    &__item {
+      max-width: 344px;
     }
   }
 }
